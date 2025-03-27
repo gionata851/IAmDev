@@ -4,6 +4,7 @@ import express from "express";
 import * as dotenv from "dotenv"
 //il router creato appositamente
 import router from "./routes/routes";
+import { logger } from "./logger/logger";
 
 
 //inizializzazione di dotenv, necessario per leggere il file .env
@@ -17,6 +18,9 @@ const app = express();
 
 //middleware per gestire raw json nel body della request
 app.use(express.json({}));
+
+//middleware log
+app.use(logger);
 
 //aggiunta del middleware router (per ulteriori info consultare routes/routes.ts)
 //Utile perchè così le dipendenze relative all'ORM Prisma e ai modelli le metto solo nel file routes.
