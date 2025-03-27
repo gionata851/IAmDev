@@ -22,6 +22,12 @@ app.use(express.json({}));
 //Utile perchè così le dipendenze relative all'ORM Prisma e ai modelli le metto solo nel file routes.
 app.use(router);
 
+//aggiungo qui un middleware perchè se il router non ha funzionato devo restituire un errore di indirizzo non valido
+app.use((req, res) => {
+    res.status(404).json({
+        msg: "Indirizzo non valido"
+    })
+});
 
 //lancio del server
 app.listen(port, () => {
