@@ -1,6 +1,3 @@
-#FILE DI ESEMPIO
-#compilare i due campi "DATABASE_URL" e "PORT" con i valori desiderati, dopodichè rinominare questo file eliminando "example" 
-#(deve chiamarsi ".env")
 
 # Environment variables declared in this file are automatically made available to Prisma.
 # See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
@@ -8,5 +5,5 @@
 # Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
 # See the documentation for all the connection string options: https://pris.ly/d/connection-strings
 
-DATABASE_URL="file:./cartella/cartella..."
+DATABASE_URL="file:./folder/folder.../database_name.db"
 PORT=1234
