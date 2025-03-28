@@ -11,7 +11,8 @@ To run it, follow these steps.
     * DATABASE_URL: the connection string. In the case of SQLite this has to be a string in the following format: "file:./[folder]/[folder].../[database_name].db". SQLite will create the database at the relative path you choose.\
     * PORT: the number of the localhost port the server will expose its APIs.
 4. Rename the **".env EXAMPLE"** file canceling "EXAMPLE". Its name has to be **.env**.
-5. Launch the **generate** script (**npm run generate** on the terminal, located in the root folder). This script generates the database at the suggested path, according to the connection string written in the .env file. It also populates the database with some test data, and lauches the server.
+5. Launch the **generate** script (**npm run generate** on the terminal, located in the root folder). This script generates the database at the suggested path, according to the connection string written in the .env file. It also populates the database with some test data.
+6. Launch the **start** script (**npm run start** on the terminal, located in the root folder) to create the server on the chosen port.
 
 Now the server is listening and can be queried with the following methods/urls:
 
@@ -22,6 +23,6 @@ POST   | /books      |    → Adds a new book.\
 PUT    | /books/:id  |    → Updates an existing book.\
 DELETE | /books/:id  |    → Deletes a book.
 
-From now on the server can be launched with the **start** script. (**npm run start** on the terminal, located in the root folder).
+From now on the server can be launched with the **start** script. 
 
 Happy reading!
