@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { validaPerInsert } from "../validation/validation";
 import { Book, Prisma, PrismaClient } from "../generated/prisma";
 
-export const insertBooks: (req: Request, res: Response) => void = async (req: Request, res: Response) => {
+export const insertBook: (req: Request, res: Response) => void = async (req: Request, res: Response) => {
 
     try {
 

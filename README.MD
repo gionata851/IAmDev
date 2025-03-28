@@ -22,6 +22,16 @@ POST   | /books      |    → Adds a new book.\
 PUT    | /books/:id  |    → Updates an existing book.\
 DELETE | /books/:id  |    → Deletes a book.
 
+POST and PUT methods require the body created as **raw JSON**. Here's an example.
+
+{
+    title : [book title], //required for the insert - must be a non-empty string
+    author : [book author's name], //required for the insert - must be a non-empty string
+    year : [issue year] //not required for the insert, but when compiled has to be a number greater than 1000
+}
+
+When sending a PUT request, you can include only the field that you want to change.
+
 From now on the server can be launched with the **start** script. (**npm run start** on the terminal, located in the root folder).
 
 Happy reading!

@@ -4,6 +4,7 @@ import express from "express";
 import * as dotenv from "dotenv"
 //il router creato appositamente
 import router from "./routes/routes";
+//il logger middleware
 import { logger } from "./logger/logger";
 
 
@@ -22,8 +23,8 @@ app.use(express.json({}));
 //middleware log
 app.use(logger);
 
-//aggiunta del middleware router (per ulteriori info consultare routes/routes.ts)
-//Utile perchè così le dipendenze relative all'ORM Prisma e ai modelli le metto solo nel file routes.
+//aggiunta del middleware router (routes/routes.ts)
+//Il router a sua volta importa i controller, i quali importano il Prisma Client ed eseguono le operazioni CRUD.
 app.use(router);
 
 //aggiungo qui un middleware perchè se il router non ha funzionato devo restituire un errore di indirizzo non valido
