@@ -4,6 +4,7 @@ This project is a simple API for storing a book catalogue.
 
 To run it, follow these steps.
 
+0. This project requires node version 22. Be sure to update it from the official site: https://nodejs.org/en
 1. Clone this project in a folder of your choice.
 2. Launch the **init** script (**npm run init** on the terminal, located in the chosen folder, which is going to be the root of the project). This command installs all the required dependencies.
 3. Open the **".env EXAMPLE"** file, and compile it with the required parameters, which are:\

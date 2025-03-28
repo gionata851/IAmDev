@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "init": "npm i",
-    "generate": "npx prisma migrate dev --name initial-migration && ts-node dataseeds.ts && ts-node index.ts",
-    "start": "ts-node index.ts"
+    "generate": "npx prisma migrate dev --name initial-migration && npx tsc &&  xcopy generated\\prisma\\*.js  dist\\generated\\prisma /i   && xcopy generated\\prisma\\runtime\\*.js  dist\\generated\\prisma\\runtime /i    && node dist/dataseeds.js",
+    "start-TS": "ts-node index.ts",
+    "start-recompile" : "npx tsc &&  xcopy generated\\prisma\\*.js  dist\\generated\\prisma /i /Y && xcopy generated\\prisma\\runtime\\*.js  dist\\generated\\prisma\\runtime /i /Y   && node dist/index.js",
+    "start" : "node dist/index.js"
   },
   "author": "Gionata851",
   "license": "ISC",
