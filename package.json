@@ -16,8 +16,7 @@
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "npm": "^11.2.0",
-    "nvm": "^0.0.4"
+    "npm": "^11.2.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
